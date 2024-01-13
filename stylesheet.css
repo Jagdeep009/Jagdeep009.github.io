@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@600&family=Montserrat&family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* background-image: linear-gradient(to left, black, rgb(25, 1, 32) 80%); */
+    /* background-image: linear-gradient(to left, black, rgb(34, 5, 43) 0%); */
+    background-color: rgb(46, 6, 58);
+    /* background: linear-gradient(to bottom,black, rgb(46, 6, 58) 29%); */
+}
+
+
+/* **************************************Fonts****************************** */
+.p1{
+    font-family: 'Josefin Sans';
+    color: #ffffff  ;
+}
+
+.p2{
+    color: white;
+}
+
+.p3{
+    color: rgba(255, 255, 255, 0.865);
+}
+
+/* ************************************sticker*************************** */
+.sticker {
+    position: fixed;
+    height: 250px;
+    width: 50px;
+    z-index: 100;
+    margin-top: 35vh;
+    background-color: rgba(204, 7, 204, 0.57);
+    border-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.social {
+    color: black;
+    font-size: 28px;
+}
+
+/* ************************************banner*************************** */
+.banner {
+    /* background-image: url('images/banner.jpg');
+    background-size: cover; */
+    height: 12rem;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.281);
+}
+
+.bg {
+    width: inherit;
+    height: inherit;
+    background-size: cover;
+    position: absolute;
+    object-fit: cover;
+    filter: blur(2px);
+    box-shadow: 0 0 15px black;
+}
+
+.banneer-content {
+    height: 100%;
+    width: 100%;
+    background-color: #0001;
+}
+
+.profile {
+    background-image: url('images/profile.jpg');
+    background-size: contain;
+    height: 120px;
+    width: 120px;
+    border: 4px solid white;
+    /* animation: colorfulBorder 5s infinite; */
+}
+
+/* @keyframes colorfulBorder {
+    0% { border-color: #620566; }
+    50% { border-color: #146F75; }
+    100% { border-color: #7E1B55; }
+  } */
+
+.name {
+    color: white;
+    font-family: 'Bebas Neue';
+    font-size: 28px;
+    margin-bottom: -7px;
+
+}
+
+.insta {
+    color: rgb(235, 231, 231);
+    font-family: 'Roboto';
+    margin-top: -7px;
+}
+
+.connect {
+    border: 1px solid #11d154;
+    background-color: #11d154;
+    color: rgb(0, 0, 0);
+    border-radius: 7px;
+    color: rgb(241, 238, 238);
+    font-size: 15px;
+    box-shadow: 0 0 5px #09a03e,0 0 10px #09a03e,0 0 15px #09a03e;
+}
+
+.connect:hover {
+    background-color: #08e756;
+    border: 1px solid #08e756;
+    box-shadow: 0 0 5px #08e756,0 0 25px #08e756,0 0 100px #08e756;
+    color: white;
+}
+
+/* **************************************Projects***************************** */
+
+.project {
+    height: 290px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+.project:hover{
+    cursor: pointer;
+    transform: scale(1.13);
+}
+.project-img {
+    transition: all 1s;
+}
+
+.project-img:hover {
+    transform: scale(1.1);
+}
+
+
+.project-content {
+    /* background-color: rgb(53, 0, 68); */
+    
+    background: rgb(156, 1, 156);
+    background: linear-gradient(to right, #692f82,rgb(114, 1, 114)); 
+}
