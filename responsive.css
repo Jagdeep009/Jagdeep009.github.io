@@ -1,0 +1,96 @@
+@media screen and (max-width: 815px) {
+    .banner{
+        height: 10rem;
+    }
+    .profile{
+        height: 105px;
+        width: 105px;
+    }
+    
+}
+
+@media screen and (max-width: 750px) {
+    .banner{
+        height: 8rem;
+    }
+    .profile{
+        height: 90px;
+        width: 90px;
+    }
+    .name{
+        font-size: 25px;
+    }
+    .insta{
+        font-size: 13px;
+    }
+    .connect{
+        font-size: 12px;
+        margin-right: 0px !important;
+    }
+    .banneer-content{
+        padding: 1px !important;
+    }
+    
+}
+
+@media screen and (max-width: 540px) {
+    .banner{
+        height: 6rem;
+    }
+    .profile{
+        height: 70px;
+        width: 70px;
+    }
+    .name{
+        font-size: 23px;
+    }
+    .connect{
+        font-size: 12px;
+        margin-right: -10px !important;
+    }
+
+    .banneer-content{
+        margin-left: -10px !important;
+        
+    }
+    
+    
+}
+
+@media screen and (max-width: 450px) {
+    .profile{
+        height: 60px;
+        width: 60px;
+    }
+    .name{
+        font-size: 20px;
+        margin-left: -10px !important;
+    }
+    .insta{
+        font-size: 11px;
+        margin-left: -10px !important;
+    }
+    .connect{
+        font-size: 10px;
+        margin-right: -10px !important;
+    }
+    .project:hover{
+        cursor: pointer;
+        transform: scale(1.07);
+    }
+
+}
+
+@media screen and (max-width: 410px) {
+    .banneer-content{
+        margin-left: -30px !important;
+    }
+    .connect{
+        margin-right: -55px !important;
+    }
+    .project:hover{
+        cursor: pointer;
+        transform: scale(1.07);
+    }
+
+}
