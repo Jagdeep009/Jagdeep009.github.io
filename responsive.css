@@ -33,6 +33,7 @@
     
 }
 
+
 @media screen and (max-width: 540px) {
     .banner{
         height: 6rem;
@@ -64,11 +65,11 @@
     }
     .name{
         font-size: 20px;
-        margin-left: -10px !important;
+        /* margin-left: -40px !important; */
     }
     .insta{
         font-size: 11px;
-        margin-left: -10px !important;
+        /* margin-left: -40px !important; */
     }
     .connect{
         font-size: 10px;
