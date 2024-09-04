@@ -21,6 +21,7 @@ async function GetNews(query) {
         }
     }
 
+
     try {
         const response = await fetch(`${url}${query}`);
         const data = await response.json();
@@ -158,3 +159,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 AsideNews("india");
+
