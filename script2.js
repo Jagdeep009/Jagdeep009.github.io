@@ -21,7 +21,7 @@ async function AsideNews(query){
     const AsideNode = document.querySelector('#template-news-aside');
     const slideNews = document.querySelectorAll('#slide-news');
     const leftNews = document.querySelectorAll('#news-left');
-    let News;
+    let News = [];
     let count = 0;
 
     try {
@@ -32,7 +32,7 @@ async function AsideNews(query){
     }
 
     News = [...News,...News,...News,...News];
-
+    container.innerHTML = "";
     for(article of News) {
         if(!article.image_url || !article.title || !article.source) continue;
 
