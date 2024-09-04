@@ -3,18 +3,38 @@ const url = "https://api.thenewsapi.com/v1/news/all?api_token=FQH1aooRQuloSDVsIz
 const remove = document.querySelector(".remove");
 const body = document.querySelector("body");
 
-AsideNews("india");
+const cacheExpiretime = 24 * 60 * 60 * 1000;
 
 async function GetNews(query) {
+    const cacheKey = `news-${query}`;
+    const isCached = localStorage.getItem(cacheKey);
+    console.log(isCached);
+
+    if(isCached) {
+        const parsedCache = JSON.parse(isCached);
+        const curTime = Date.now();
+
+        if(curTime - parsedCache.timestamp < cacheExpiretime) {
+            return parsedCache.data;
+        }else {
+            localStorage.removeItem(cacheKey);
+        }
+    }
+
     try {
         const response = await fetch(`${url}${query}`);
         const data = await response.json();
-        console.log(data)
+        const cacheValue = {
+            timestamp: Date.now(),
+            data: data.data,
+        }
+        localStorage.setItem(cacheKey,JSON.stringify(cacheValue));
         return data.data;
-    }catch (error){
+    } catch (error) {
         throw error;
-    }   
+    }
 }
+
 
 async function AsideNews(query){
     const container = document.querySelector("#news-list")
@@ -110,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.querySelectorAll("#nav-item").forEach((n)=>{
         n.addEventListener('click',async function (){
-            console.log("yes")
             await AsideNews(n.innerText);
         })
     });
@@ -138,5 +157,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
+AsideNews("india");
