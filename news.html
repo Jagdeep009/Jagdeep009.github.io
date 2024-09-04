@@ -310,6 +310,18 @@
     }
 </style>
 
+<style>
+    .modal.fade.show {
+        backdrop-filter: blur(2px);
+    }
+    .enter-dev {
+        background-color: #A995E5;
+        padding: 1px 10px;
+        border: none;
+    }
+
+</style>
+
 <body class="overflow-hidden">
     <main class="h-100">
         <div class="d-flex h-100 py-3 h-100 flex-wrap">
@@ -428,11 +440,29 @@
             }
         }
     </style>
-    <div class="remove h-100 w-100 d-flex justify-content-center align-items-center position-absolute top-0">
-        <div class="loader"></div>
+    <div class="remove h-100 w-100 d-flex justify-content-center align-items-center position-absolute top-0"><div class="loader"></div></div>
+
+    <!-- Limit exceed -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-danger text-center w-100"><i class="fa-solid fa-triangle-exclamation me-2"></i>Limit Exceed</h5>
+        </div>
+        <div class="modal-body">
+          Enter developer mode:-
+          <input type="text" name="" id="dev-mode">
+          <button class="enter-dev">Enter</button>
+          <p id="dev-mode-error" class="text-danger d-none text-center mt-2 mb-0">Wrong Password</p>
+        </div>
+      </div>
     </div>
+  </div>
+  
+  
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         var swiper = new Swiper(".aside-sliderr", {
             rewind: true,
